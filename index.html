@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Floating Hearts -->
+    <div id="hearts-container"></div>
+
+    <!-- Music -->
+    <button id="musicBtn" class="music-btn">🎵 Music</button>
+
+    <audio id="birthdayMusic" loop>
+        <source src="C:\Users\vaibh\Desktop\Birthday Web\music\birthday.mpeg" type="audio/mpeg">
+    </audio>
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-title">A little surprise for you ✨</p>
+
+            <h1>Happy Birthday</h1>
+
+            <h2 id="herName">Madam Ji ❤️</h2>
+
+            <p class="hero-text">
+                Today is not just another day...
+                Today is the day someone very special was born. She is my Madam Ji.  🌸
+            </p>
+
+            <button class="main-btn" onclick="scrollToSection('memories')">
+                Start the Surprise ✨
+            </button>
+
+        </div>
+
+        <div class="scroll-down">
+            ↓
+        </div>
+
+    </section>
+
+
+    <!-- COUNTDOWN -->
+    <section class="section countdown-section">
+
+        <p class="section-label">The special day is coming...</p>
+
+        <h2>🎂 Birthday Countdown</h2>
+
+        <div class="countdown">
+
+            <div class="time-box">
+                <span id="days">00</span>
+                <small>Days</small>
+            </div>
+
+            <div class="time-box">
+                <span id="hours">00</span>
+                <small>Hours</small>
+            </div>
+
+            <div class="time-box">
+                <span id="minutes">00</span>
+                <small>Minutes</small>
+            </div>
+
+            <div class="time-box">
+                <span id="seconds">00</span>
+                <small>Seconds</small>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MEMORIES -->
+    <section id="memories" class="section">
+
+        <p class="section-label">Some beautiful moments 📸</p>
+
+        <h2>Our Memories</h2>
+
+        <p class="section-description">
+            Every picture has a story, and every story has a special place in my heart.
+        </p>
+
+        <div class="gallery">
+
+            <div class="photo-card">
+                <img src="C:\Users\vaibh\Desktop\Birthday Web\images\photos1.jpeg" alt="Memory 1">
+                <div class="photo-caption">
+                    One beautiful memory ❤️
+                </div>
+            </div>
+
+            <div class="photo-card">
+                <img  src="C:\Users\vaibh\Desktop\Birthday Web\images\photos2.jpeg" alt="Memory 2">
+                <div class="photo-caption">
+                    A moment worth remembering ✨
+                </div>
+            </div>
+
+            <div class="photo-card">
+                <img src="C:\Users\vaibh\Desktop\Birthday Web\images\photos3.jpeg" alt="Memory 3">
+                <div class="photo-caption">
+                     A memory I will always cherish 💕
+                </div>
+            </div>
+
+            <div class="photo-card">
+                <img src="C:\Users\vaibh\Desktop\Birthday Web\images\photos4.jpeg" alt="Memory 4">
+                <div class="photo-caption">
+                    Happiness looks like this 🌸
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- LOVE LETTER -->
+    <section class="section letter-section">
+
+        <p class="section-label">Something from my heart 💌</p>
+
+        <h2>A Special Message</h2>
+
+        <div class="envelope" id="envelope" onclick="openLetter()">
+
+            <div class="envelope-top"></div>
+
+            <div class="letter-paper">
+
+                <h3>For HER_NAME ❤️</h3>
+
+                <p id="letterText"></p>
+
+            </div>
+
+            <div class="envelope-body">
+                💌
+            </div>
+
+        </div>
+
+        <p class="click-text">
+            Tap the envelope 💌
+        </p>
+
+    </section>
+
+
+    <!-- REASONS -->
+    <section class="section">
+
+        <p class="section-label">There are many reasons...</p>
+
+        <h2>Why You're Special ❤️</h2>
+
+        <div class="reasons">
+
+            <div class="reason-card">
+                <div class="reason-icon">😊</div>
+                <h3>Your Smile</h3>
+                <p>
+                    Your smile has a beautiful way of making ordinary moments feel special.
+                </p>
+            </div>
+
+            <div class="reason-card">
+                <div class="reason-icon">🌸</div>
+                <h3>Your Kindness</h3>
+                <p>
+                    Your kindness makes you the wonderful person you are.
+                </p>
+            </div>
+
+            <div class="reason-card">
+                <div class="reason-icon">✨</div>
+                <h3>Your Presence</h3>
+                <p>
+                    Somehow, everything feels a little better when you're around.
+                </p>
+            </div>
+
+            <div class="reason-card">
+                <div class="reason-icon">❤️</div>
+                <h3>Simply You</h3>
+                <p>
+                    You don't need a reason. Being yourself is already special.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SURPRISE -->
+    <section class="section surprise-section">
+
+        <p class="section-label">One last surprise 🎁</p>
+
+        <h2>There's Something For You</h2>
+
+        <p class="section-description">
+            Click the gift and see what happens...
+        </p>
+
+        <div class="gift-container" onclick="openGift()">
+
+            <div class="gift">
+
+                <div class="gift-lid"></div>
+
+                <div class="gift-box">
+                    <div class="vertical-ribbon"></div>
+                </div>
+
+                <div class="ribbon-top"></div>
+
+            </div>
+
+        </div>
+
+        <div id="surpriseMessage" class="surprise-message">
+
+            <h2>🎉 Happy Birthday! 🎉</h2>
+
+            <p>
+                May your life always be filled with happiness,
+                beautiful moments and lots of reasons to smile.
+            </p>
+
+            <h3>
+                Keep smiling, HER_NAME ❤️
+            </h3>
+
+        </div>
+
+    </section>
+
+
+    <!-- FINAL -->
+    <section class="final-section">
+
+        <div class="fireworks">✨ ✨ ✨</div>
+
+        <h1>Happy Birthday</h1>
+
+        <h2>HER_NAME ❤️</h2>
+
+        <p>
+            With lots of love and the warmest wishes,
+        </p>
+
+        <h3>YOUR_NAME</h3>
+
+        <button class="main-btn" onclick="createConfetti()">
+            Celebrate Again 🎉
+        </button>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            Made with ❤️ for someone special.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
